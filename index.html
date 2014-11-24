@@ -7,14 +7,40 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   
-  <!-- TODO: Need wc.js -->
-  <!-- <script src="bower_components/webcomponentsjs/webcomponents.js"></script> -->
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="elements.html">
   
-  <!-- <link rel="stylesheet" href="app.css"> -->
+  <link rel="stylesheet" href="app.css">
 </head>
 
-<body>
-  <!-- place components here -->
+<body fullbleed>
+
+  <template is="auto-binding" id="app">
+    <core-drawer-panel>
+      
+      <core-header-panel drawer>
+        <core-toolbar>
+          <div>Menu</div>
+        </core-toolbar>
+      </core-header-panel>
+
+      <core-header-panel main>
+        <core-toolbar>
+          <core-icon-button icon="menu"></core-icon-button>
+          <div>{{headline}}</div>
+        </core-toolbar>
+      </core-header-panel>
+
+    </core-drawer-panel>
+  </template>
+
+  <script>
+  var app = document.getElementById('app');
+  app.addEventListener('template-bound', function() {
+    app.headline = 'My Polymer App';
+  });
+  </script>
+
 </body>
 
 </html>
