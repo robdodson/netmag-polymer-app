@@ -22,13 +22,37 @@
         <core-toolbar>
           <div>Menu</div>
         </core-toolbar>
+        <core-menu selected="{{page}}" valueattr="label">
+          <paper-item noink label="First">First</paper-item>
+          <paper-item noink label="Polymer">Polymer</paper-item>
+          <paper-item noink label="App">App</paper-item>
+        </core-menu>
       </core-header-panel>
 
       <core-header-panel main>
         <core-toolbar>
-          <core-icon-button icon="menu"></core-icon-button>
+          <paper-icon-button icon="menu" core-drawer-toggle>
+          </paper-icon-button>
           <div>{{headline}}</div>
         </core-toolbar>
+        <core-pages selected="{{page}}" valueattr="label" fit>
+          <section label="First" layout horizontal center-center>
+            <div layout vertical center-center>
+              <h1>This is my first Polymer App</h1>
+              <img src="images/polymer-logo.svg" alt="polymer logo" width="200px">
+            </div>
+          </section>
+          <section label="Polymer" layout horizontal center-center>
+            <div layout vertical center-center>
+              <h1>I think it's pretty cool</h1>
+            </div>
+          </section>
+          <section label="App" layout horizontal center-center>
+            <div layout vertical center-center>
+              <h1>Learn more at <a href="https://www.polymer-project.org/">polymer-project.org</a></h1>
+            </div>
+          </section>
+        </core-pages>
       </core-header-panel>
 
     </core-drawer-panel>
@@ -38,9 +62,11 @@
   var app = document.getElementById('app');
   app.addEventListener('template-bound', function() {
     app.headline = 'My Polymer App';
+    app.page = 'First';
   });
   </script>
 
 </body>
 
 </html>
+'
