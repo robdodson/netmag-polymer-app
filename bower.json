@@ -1,9 +1,6 @@
 {
   "name": "netmag-polymer-app",
   "version": "0.0.0",
-  "authors": [
-    "Rob Dodson <robdodson@google.com>"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
