@@ -1,0 +1,14 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #EEE;
+}
+
+[drawer] {
+  background-color: #FFF;
+}
+
+core-pages > section > div {
+  width: 85%;
+  height: 85%;
+  background-color: #FFF;
+}
