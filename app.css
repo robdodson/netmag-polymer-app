@@ -1,14 +1,52 @@
 body {
-  font-family: Roboto, Helvetica, sans-serif;
+  font-family: RobotoDraft, Helvetica, sans-serif;
+  font-weight: 300;
   background-color: #EEE;
+}
+
+core-toolbar {
+  background-color: #3F51B5;
+  color: #FFF;
 }
 
 [drawer] {
   background-color: #FFF;
+  box-shadow: 1px 0 1px rgba(0,0,0,.1);
+}
+
+paper-item {
+  color: #303F9F;
+}
+
+paper-item.core-selected {
+  background-color: #C5CAE9;
 }
 
 core-pages > section > div {
   width: 85%;
   height: 85%;
   background-color: #FFF;
+}
+
+h1 {
+  font-size: 6vw;
+}
+
+.logo {
+  width: 40%;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  .logo {
+    width: 30%;
+  }
 }

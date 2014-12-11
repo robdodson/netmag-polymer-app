@@ -16,7 +16,7 @@
 <body fullbleed>
 
   <template is="auto-binding" id="app">
-    <core-drawer-panel>
+    <core-drawer-panel responsiveWidth="960px">
       
       <core-header-panel drawer>
         <core-toolbar>
@@ -38,8 +38,10 @@
         <core-pages selected="{{page}}" valueattr="label" fit>
           <section label="First" layout horizontal center-center>
             <div layout vertical center-center>
-              <h1>This is my first Polymer App</h1>
-              <img src="images/polymer-logo.svg" alt="polymer logo" width="200px">
+              <h1>My first Polymer App</h1>
+              <div class="logo">
+                <img class="img-responsive" src="images/polymer-logo.svg" alt="polymer logo">
+              </div>
             </div>
           </section>
           <section label="Polymer" layout horizontal center-center>
@@ -49,7 +51,7 @@
           </section>
           <section label="App" layout horizontal center-center>
             <div layout vertical center-center>
-              <h1>Learn more at <a href="https://www.polymer-project.org/">polymer-project.org</a></h1>
+              <h1>Learn more at <br><a href="https://www.polymer-project.org/">polymer-project.org</a></h1>
             </div>
           </section>
         </core-pages>
